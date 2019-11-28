@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="AttendanceRecord.DataOutput"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AttendanceRecord"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button Style="{StaticResource NavigationBackButtonNormalStyle}" Click="Button_MainPage"/>
+
+        <StackPanel x:Name="contentPanel" Margin="75,32,45,178" Grid.RowSpan="2" >
+            <TextBlock HorizontalAlignment="Left" Text="データ出力" FontSize="36"/>
+            
+           <!--ボタン配置-->
+            <StackPanel Orientation="Vertical">
+                
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock HorizontalAlignment="Left" Text="集計開始の日付を選択" FontSize="25" Margin="50"></TextBlock>
+                    <DatePicker x:Name="StartDay" Header="Date of birth" Margin="50,0" CalendarIdentifier="JapaneseCalendar"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock HorizontalAlignment="Left" Text="集計終了の日付を選択" FontSize="25" Margin="50"></TextBlock>
+                    <DatePicker x:Name="EndDay" Header="Date of birth" Margin="50,0" CalendarIdentifier="JapaneseCalendar"/>
+                </StackPanel>
+             
+
+
+            </StackPanel>
+            <Button x:Name="出力" Content="出力" FontSize="20" Margin="400,50" ClickMode="Press" Click="出力_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

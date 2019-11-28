@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="AttendanceRecord.AttendanceInput"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:AttendanceRecord"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button Style="{StaticResource NavigationBackButtonNormalStyle}" Click="Button_MainPage"/>
+
+        <StackPanel x:Name="contentPanel" Margin="75,32,45,-2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <TextBlock HorizontalAlignment="Left" Text="出欠席入力" FontSize="36"/>
+           
+           
+        </StackPanel>
+    </Grid>
+</Page>
